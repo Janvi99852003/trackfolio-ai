@@ -28,26 +28,6 @@ Built with the **MERN Stack** and designed with a modern, responsive UI.
 
 ---
 
-# 📸 Application Preview
-
-> Replace these screenshots with your own after deployment.
-
-<p align="center">
-
-<img src="./screenshots/login.png" width="800">
-
-<br><br>
-
-<img src="./screenshots/dashboard.png" width="800">
-
-<br><br>
-
-<img src="./screenshots/ai-match.png" width="800">
-
-</p>
-
----
-
 # ✨ Features
 
 ## 🔐 Authentication
@@ -160,7 +140,8 @@ Built using Tailwind CSS for a modern and clean interface.
 
 ---
 
-## Deployment
+## Deployment :- 
+LIVE DEMO LINK :- 
 
 Frontend
 
@@ -531,9 +512,9 @@ Job
 
 B.Tech CSE Student | MERN Stack Developer | AI Enthusiast
 
-**GitHub:** https://github.com/YOUR_USERNAME
+**GitHub:** https://github.com/Janvi99852003
 
-**LinkedIn:** https://linkedin.com/in/YOUR_USERNAME
+**LinkedIn:** https://www.linkedin.com/in/janvi-jaiswal-72415b307?utm_source=share_via&utm_content=profile&utm_medium=member_ios
 
 ---
 
