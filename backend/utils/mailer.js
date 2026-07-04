@@ -1,27 +1,16 @@
-const nodemailer = require("nodemailer");
-const dns = require("dns");
+const brevo = require("@getbrevo/brevo");
 
-// Force Node to prefer IPv4 when resolving domain names
-dns.setDefaultResultOrder("ipv4first");
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  requireTLS: true,
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
+const apiInstance = new brevo.TransactionalEmailsApi();
+apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 
 async function sendEmail({ to, subject, html }) {
-  await transporter.sendMail({
-    from: `"TrackFolio AI" <${process.env.GMAIL_USER}>`,
-    to,
-    subject,
-    html,
-  });
+  const email = new brevo.SendSmtpEmail();
+  email.sender = { name: "TrackFolio AI", email: process.env.GMAIL_USER };
+  email.to = [{ email: to }];
+  email.subject = subject;
+  email.htmlContent = html;
+
+  await apiInstance.sendTransacEmail(email);
 }
 
 module.exports = sendEmail;
