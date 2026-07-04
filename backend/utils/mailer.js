@@ -1,16 +1,14 @@
-const brevo = require("@getbrevo/brevo");
+const { BrevoClient } = require("@getbrevo/brevo");
 
-const apiInstance = new brevo.TransactionalEmailsApi();
-apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
+const brevo = new BrevoClient({ apiKey: process.env.BREVO_API_KEY });
 
 async function sendEmail({ to, subject, html }) {
-  const email = new brevo.SendSmtpEmail();
-  email.sender = { name: "TrackFolio AI", email: process.env.GMAIL_USER };
-  email.to = [{ email: to }];
-  email.subject = subject;
-  email.htmlContent = html;
-
-  await apiInstance.sendTransacEmail(email);
+  await brevo.transactionalEmails.sendTransacEmail({
+    sender: { name: "TrackFolio AI", email: process.env.GMAIL_USER },
+    to: [{ email: to }],
+    subject: subject,
+    htmlContent: html,
+  });
 }
 
 module.exports = sendEmail;
