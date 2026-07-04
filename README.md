@@ -1,541 +1,291 @@
 <div align="center">
 
-# 🚀 TrackFolio AI
+# 📌 TrackFolio AI
 
-### AI-Powered Job Application Tracker
+### AI-Powered Job Application Tracker with Resume-JD Fit Scoring
 
-Track every application, organize your job search, and instantly evaluate how well your resume matches any job description using Google Gemini AI.
+A full-stack MERN application that helps job seekers manage their entire application pipeline while leveraging AI to analyze how well their resume aligns with specific job descriptions.
 
-Built with the **MERN Stack** and designed with a modern, responsive UI.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://trackfolio-ai.vercel.app/)
+[![Backend API](https://img.shields.io/badge/Backend-API-blue)](https://trackfolio-backend-o7rm.onrender.com)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-<p>
-
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
-
-</p>
-
-**Manage your applications. Track your progress. Improve your resume with AI.**
-
-🌐 **Live Demo:** Coming Soon  
-📄 **Documentation:** Coming Soon
+**[Live Demo](https://trackfolio-ai.vercel.app/) · [Backend API](https://trackfolio-backend-o7rm.onrender.com) · [Report Bug](https://github.com/Janvi99852003/Trackfolio/issues)**
 
 </div>
 
 ---
 
-# ✨ Features
+## 📖 Overview
 
-## 🔐 Authentication
+TrackFolio AI was built to solve a real problem faced by every job seeker: keeping track of dozens of applications across different stages, while having no easy way to know if a resume is actually a good match for a given job description before applying.
 
-- Secure JWT Authentication
-- Password hashing using bcrypt
-- Protected routes
-- Persistent login sessions
+The platform combines a complete job-tracking pipeline with **Google Gemini API-powered resume analysis**, giving users an AI-generated fit score and actionable feedback for every job they're considering — helping them prioritize applications that are worth the effort instead of applying blindly.
 
----
-
-## 📧 Password Recovery
-
-- Forgot Password functionality
-- Secure email verification
-- One-time password reset tokens
-- Token expiration for enhanced security
+Built with production-grade practices: JWT authentication, bcrypt password hashing, email-based password recovery, and a clean RESTful API architecture connecting a React frontend to an Express/MongoDB backend.
 
 ---
 
-## 📋 Job Application Management
+## 🔗 Live Links
 
-- Create job applications
-- Update existing applications
-- Delete applications
-- Track application status
+| Resource | Link |
+|---|---|
+| 🌐 Frontend (Live App) | [https://trackfolio-ai.vercel.app/](https://trackfolio-ai.vercel.app/) |
+| ⚙️ Backend API | [https://trackfolio-backend-o7rm.onrender.com](https://trackfolio-backend-o7rm.onrender.com) |
+| 💻 Source Code | [https://github.com/Janvi99852003/Trackfolio](https://github.com/Janvi99852003/Trackfolio) |
 
-Supported stages:
-
-- Applied
-- Interview
-- Offer
-- Rejected
+> **Note:** The backend is hosted on Render's free tier, so the first request after inactivity may take 30–50 seconds to spin up (cold start). Subsequent requests will be fast.
 
 ---
 
-## 📊 Interactive Dashboard
+## ✨ Key Features
 
-Monitor your entire job search from one place.
+### 📋 Job Application Management
+- Add, edit, and delete job applications with full details (company, role, status, link, notes)
+- Track applications across pipeline stages: **Applied → Interview → Offer → Rejected**
+- Clean, card-based dashboard view of all applications at a glance
 
-Dashboard includes:
+### 🤖 AI-Powered Resume Fit Scoring
+- Paste a job description and get an instant AI-generated compatibility score against your resume
+- Powered by **Google Gemini API** for natural language understanding
+- Returns actionable feedback highlighting skill gaps and alignment strengths
 
-- Total Applications
-- Applied Count
-- Interviews Scheduled
-- Offers Received
-- Rejections
-- Recent Applications
+### 🔐 Secure Authentication
+- JWT-based stateless authentication
+- Passwords hashed with **bcrypt** before storage — plaintext passwords are never stored or logged
+- Protected routes with middleware-based token verification
 
----
+### 📧 Password Recovery
+- Full forgot-password → email link → reset-password flow
+- Emails sent via **Nodemailer**
+- Reset tokens are time-limited and single-use for security
 
-## 🤖 AI Resume Matching
-
-One of the core features of TrackFolio AI.
-
-Simply paste:
-
-- Your Resume
-- A Job Description
-
-Google Gemini analyzes both and provides:
-
-- Resume Match Score
-- Missing Skills
-- Strengths
-- Suggestions for Improvement
-- ATS-Friendly Feedback
+### 📱 Responsive Design
+- Fully responsive UI built with **React** and **Tailwind CSS**
+- Consistent experience across desktop, tablet, and mobile
 
 ---
 
-## 📱 Responsive UI
+## 🛠️ Tech Stack
 
-Designed for:
+<table>
+<tr>
+<td valign="top" width="33%">
 
-- Desktop
-- Tablet
-- Mobile
-
-Built using Tailwind CSS for a modern and clean interface.
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-- React 19
-- React Router DOM
+**Frontend**
+- React (Vite)
 - Tailwind CSS
 - Axios
-- Context API
+- React Router
 
----
+</td>
+<td valign="top" width="33%">
 
-## Backend
-
+**Backend**
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
+- MongoDB Atlas
+- Mongoose ODM
+- JWT
 - bcrypt
 - Nodemailer
 
----
+</td>
+<td valign="top" width="33%">
 
-## AI
-
+**AI & Deployment**
 - Google Gemini API
+- Vercel (Frontend)
+- Render (Backend)
+- Git / GitHub
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Deployment :- 
-LIVE DEMO LINK :- 
+## 📸 Screenshots
 
-Frontend
+<div align="center">
 
-- Vercel
+### Dashboard View
+Track all your job applications in one clean, organized view
 
-Backend
+![Dashboard Screenshot](./screenshots/Screenshot%202026-07-04%20112921.png)
 
-- Render
+<br>
 
-Database
+### Application Details & Status Tracking
+Manage individual applications, edit details, and update pipeline status
 
-- MongoDB Atlas
+![Application Details Screenshot](./screenshots/Screenshot%202026-07-04%20113434.png)
 
----
+<br>
 
-# 🏗️ System Architecture
+### AI-Powered Resume Fit Analysis
+Get instant AI feedback on resume-job description alignment
 
-```
-                    User
+![AI Fit Score Screenshot](./screenshots/Screenshot%202026-07-04%20113451.png)
 
-                      │
-                      │
-                      ▼
-
-          React Frontend (Vercel)
-
-                      │
-               HTTPS REST API
-                      │
-
-                      ▼
-
-         Express + Node Backend
-               (Render)
-
-          │               │
-          │               │
-          ▼               ▼
-
-   MongoDB Atlas      Google Gemini API
-
- Store Job Data      Resume Matching
- User Accounts       AI Suggestions
- Password Tokens
-```
+</div>
 
 ---
 
-# 📂 Project Structure
+## ⚙️ Getting Started (Local Setup)
 
-```
-TrackFolio-AI/
+### Prerequisites
 
-│
+Make sure you have the following installed/available before setup:
+- **Node.js** v18 or higher
+- **npm** (comes with Node.js)
+- A **MongoDB Atlas** account (free tier works)
+- A **Google Gemini API key** ([Get one here](https://ai.google.dev/))
+- A **Gmail account** with an App Password enabled (for Nodemailer)
 
-├── backend/
-
-│   ├── config/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── controllers/
-│   ├── server.js
-│   └── package.json
-
-│
-
-├── frontend/
-
-│   ├── public/
-│   ├── src/
-
-│   │
-
-│   ├── components/
-│   ├── pages/
-│   ├── context/
-│   ├── api/
-│   ├── utils/
-│   ├── App.jsx
-│   └── main.jsx
-
-│
-
-├── screenshots/
-
-├── README.md
-
-└── .gitignore
-```
-
----
-
-# 🚀 Getting Started
-
-## Prerequisites
-
-Install:
-
-- Node.js (v18 or above)
-- MongoDB Atlas
-- Google Gemini API Key
-- Gmail App Password
-
----
-
-## Clone Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/TrackFolio-AI.git
-
-cd TrackFolio-AI
+git clone https://github.com/Janvi99852003/Trackfolio.git
+cd Trackfolio
 ```
 
----
-
-# Backend Setup
+### 2. Backend Setup
 
 ```bash
 cd backend
-
 npm install
 ```
 
-Create a `.env`
+Create a `.env` file inside the `backend/` folder with the following variables:
 
 ```env
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key
+GEMINI_API_KEY=your_google_gemini_api_key
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_gmail_app_password
+CLIENT_URL=http://localhost:5173
 PORT=5000
-
-MONGO_URI=YOUR_MONGODB_URI
-
-JWT_SECRET=YOUR_SECRET
-
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-
-GMAIL_USER=your_email@gmail.com
-
-GMAIL_APP_PASSWORD=your_app_password
 ```
 
-Run backend
+Start the backend server:
 
 ```bash
-npm run dev
+npm start
 ```
 
----
+The backend will run on `http://localhost:5000`
 
-# Frontend Setup
+### 3. Frontend Setup
+
+Open a new terminal window:
 
 ```bash
 cd frontend
-
 npm install
-```
-
-Create `.env`
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-Run frontend
-
-```bash
 npm run dev
 ```
 
-Application starts at
+The frontend will run on `http://localhost:5173`
+
+### 4. You're all set! 🎉
+
+Open `http://localhost:5173` in your browser, sign up for an account, and start tracking your job applications.
+
+---
+
+## 📁 Project Structure
 
 ```
-http://localhost:5173
+Trackfolio/
+├── backend/
+│   ├── middleware/       # Auth middleware, error handlers
+│   ├── models/           # Mongoose schemas (User, Job)
+│   ├── routes/           # API route definitions
+│   ├── utils/
+│   │   └── mailer.js     # Nodemailer email logic
+│   ├── .env               # Environment variables (not committed)
+│   ├── server.js          # Express app entry point
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/            # Axios instance & API calls
+│   │   ├── components/     # Reusable UI components (JobCard, AddJobModal, etc.)
+│   │   ├── pages/           # Route-level pages (Dashboard, Login, Signup, etc.)
+│   │   ├── App.jsx
+│   │   └── index.css
+│   └── package.json
+│
+├── screenshots/            # App screenshots used in this README
+├── .gitignore
+└── README.md
 ```
 
 ---
 
-# 🔐 Authentication Flow
+## 🔌 API Overview
 
-```
-User Signup
-      │
-      ▼
-
-Password Hashing
-   (bcrypt)
-
-      │
-
-      ▼
-
-Save User
-
-      │
-
-      ▼
-
-Login
-
-      │
-
-      ▼
-
-JWT Generated
-
-      │
-
-      ▼
-
-Protected API Requests
-
-      │
-
-      ▼
-
-JWT Middleware Verification
-
-      │
-
-      ▼
-
-Authorized Access
-```
+| Method | Endpoint | Description | Auth Required |
+|---|---|---|---|
+| POST | `/api/auth/signup` | Register a new user | No |
+| POST | `/api/auth/login` | Log in and receive JWT | No |
+| POST | `/api/auth/forgot-password` | Request password reset email | No |
+| POST | `/api/auth/reset-password/:token` | Reset password using token | No |
+| GET | `/api/jobs` | Get all jobs for logged-in user | Yes |
+| POST | `/api/jobs` | Create a new job application | Yes |
+| PUT | `/api/jobs/:id` | Update a job application | Yes |
+| DELETE | `/api/jobs/:id` | Delete a job application | Yes |
+| POST | `/api/jobs/analyze` | Get AI fit score for resume vs. job description | Yes |
 
 ---
 
-# 🤖 AI Resume Matching Flow
+## 🔒 Security Practices
 
-```
-Resume
-
-       +
-
-Job Description
-
-        │
-
-        ▼
-
-Google Gemini API
-
-        │
-
-        ▼
-
-Structured JSON Response
-
-        │
-
-        ▼
-
-Resume Score
-
-Missing Skills
-
-Strengths
-
-Suggestions
-
-        │
-
-        ▼
-
-Saved inside Job Document
-```
+- **Password Hashing:** All passwords are hashed using bcrypt before being stored — plaintext passwords never touch the database
+- **JWT Authentication:** Stateless token-based auth protects all sensitive routes via middleware
+- **Environment Variables:** All secrets (DB URI, JWT secret, API keys, email credentials) are stored in `.env` and excluded from version control via `.gitignore`
+- **Time-Limited Reset Tokens:** Password reset tokens expire after a set period and can only be used once
+- **Input Validation:** Backend routes validate incoming data before processing
 
 ---
 
-# 🔒 Security Features
+## 🗺️ Roadmap
 
-- JWT Authentication
-- Password Hashing using bcrypt
-- Environment Variables
-- Protected API Routes
-- User-specific Database Queries
-- Secure Password Reset
-- One-time Reset Tokens
-- Token Expiration
-- Email Verification
-- Sensitive credentials excluded via `.gitignore`
+- [ ] Add analytics dashboard (application success rate, response time trends)
+- [ ] Add resume file upload (PDF parsing) instead of manual paste
+- [ ] Add email reminders for follow-ups
+- [ ] Add dark/light theme toggle
+- [ ] Add unit and integration tests
 
 ---
 
-# 📊 Database Models
+## 🤝 Contributing
 
-## User
-
-```
-User
-
-├── Name
-├── Email
-├── Password
-├── Reset Token
-├── Token Expiry
-└── Created At
-```
+This is a personal portfolio project, but suggestions and feedback are welcome. Feel free to open an issue or fork the repo.
 
 ---
 
-## Job
+## 📄 License
 
-```
-Job
-
-├── Company
-├── Position
-├── Status
-├── Job Description
-├── Resume Match Score
-├── Missing Skills
-├── Suggestions
-├── User ID
-└── Created At
-```
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-# 💡 Key Highlights
-
-✅ Full MERN Stack Application
-
-✅ AI Resume Analyzer
-
-✅ Secure Authentication
-
-✅ Password Reset via Email
-
-✅ Responsive Design
-
-✅ REST API
-
-✅ MongoDB Atlas Integration
-
-✅ Production Ready Structure
-
-✅ Recruiter-Friendly Dashboard
-
----
-
-# 📈 Future Improvements
-
-- Resume PDF Upload
-- Drag-and-Drop Kanban Board
-- Email Notifications
-- Calendar Integration
-- Interview Reminder System
-- Company Notes
-- Cover Letter Generator
-- Resume Version Tracking
-- Dark Mode
-- Analytics Dashboard
-- Export Applications to CSV/PDF
-
----
-
-# 📝 Notes
-
-- Render free-tier backend may require 30–60 seconds to wake up after inactivity.
-- Gmail SMTP is used for password reset emails.
-- Store all secrets in environment variables and never commit them to GitHub.
-
----
-
-# 👩‍💻 Author
+## 👤 Author
 
 **Janvi Jaiswal**
 
-B.Tech CSE Student | MERN Stack Developer | AI Enthusiast
+B.Tech CSE Student | Full-Stack & AI Developer
 
-**GitHub:** https://github.com/Janvi99852003
-
-**LinkedIn:** https://www.linkedin.com/in/janvi-jaiswal-72415b307?utm_source=share_via&utm_content=profile&utm_medium=member_ios
-
----
-
-# ⭐ Support
-
-If you found this project useful,
-
-⭐ Star the repository
-
-🍴 Fork it
-
-🐛 Report issues
-
-💡 Suggest improvements
+- 💻 GitHub: [@Janvi99852003](https://github.com/Janvi99852003)
+- 💼 LinkedIn: [Janvi Jaiswal](https://www.linkedin.com/in/janvi-jaiswal-72415b307/)
 
 ---
 
 <div align="center">
 
-### Thank you for visiting TrackFolio AI!
-
-Made with ❤️ using the MERN Stack and Google Gemini AI.
+If you found this project interesting, consider giving it a ⭐ on GitHub!
 
 </div>
