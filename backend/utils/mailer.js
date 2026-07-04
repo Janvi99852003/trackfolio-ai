@@ -1,14 +1,18 @@
 const nodemailer = require("nodemailer");
+const dns = require("dns");
+
+// Force Node to prefer IPv4 when resolving domain names
+dns.setDefaultResultOrder("ipv4first");
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  port: 587,
+  secure: false,
+  requireTLS: true,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_APP_PASSWORD,
   },
-  family: 4, // force IPv4, avoids ENETUNREACH on some hosts
 });
 
 async function sendEmail({ to, subject, html }) {
