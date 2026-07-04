@@ -94,8 +94,7 @@ router.post("/forgot-password", async (req, res) => {
     user.resetTokenExpiry = Date.now() + 60 * 60 * 1000; // valid 1 hour
     await user.save();
 
-    const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
-
+    const resetLink = `https://trackfolio-ai.vercel.app/reset-password/${resetToken}`;
     await sendEmail({
       to: email,
       subject: "Reset your TrackFolio password",

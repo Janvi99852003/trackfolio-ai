@@ -10,7 +10,10 @@ const aiRoutes = require("./routes/aiRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5173", "https://trackfolio-ai.vercel.app"],
+  credentials: true,
+}));
 app.use(express.json());
 
 // ---- Connect to MongoDB Atlas ----
